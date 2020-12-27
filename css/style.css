@@ -1,0 +1,263 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 73vw;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(../photo/1/jj-ying-7JX0-bfiuxQ-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.menu {
+    color: #85689a;
+    font-size: 4.5vh;
+    padding-top: 17vh;
+    margin-bottom: 5.7vh;
+    white-space: nowrap;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__list-item + .menu__list-item {
+    margin-left: 3.6vw;
+
+}
+
+.menu__link:hover {
+    color: #280e3b;
+}
+
+.search-btn {
+    position: relative;
+}
+
+.search-btn::before {
+    content: "\f002";
+    font-family: 'icomoon';
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    left: -5vh;
+}
+
+.slider {
+    height: 65.6vh;
+    position: relative;
+}
+
+.slider__title {
+    font-size: 7.6vh;
+    color: #cdc16d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 3;
+    letter-spacing: 0.2vw;
+}
+
+.date {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 4.3vh;
+    line-height: 7vh;
+    color: #85689a;
+    padding: 5.7vh 2.1vw;
+    margin: 9.8vh 5.5vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.slider::before {
+    font-family: 'icomoon';
+    content: "\f053";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    font-size: 7vh;
+    color: #85689a;
+}
+
+.slider::after {
+    font-family: 'icomoon';
+    content: "\f054";
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    font-size: 7vh;
+    color: #85689a;
+}
+
+
+
+
+.date__right,
+.date__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.date__right {
+    text-align: right;
+}
+
+.current__exhibition {
+    width: 27vw;
+    height: 65.8vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.main-btn {
+    padding: 1.2vh 6.8vw 1.2vh 1.6vw;
+    background-color: #85689a;
+    font-size: 2.7vh;
+    line-height: 1.2;
+    color: #fff;
+
+}
+
+.more-btn {
+    position: relative;
+    left: 39%;
+    top: 3.5vh;
+}
+.main-btn::after {
+    content: "\f178";
+    font-family: 'icomoon';
+    position: absolute;
+    font-size: 5vh;
+    right: 1.3vw;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.main-btn:hover {
+    color: #000;
+}
+
+.upcoming-exhibition {
+    height: 100vh;
+    background-color: #a1a1a1;
+    padding: 0 6.8vw;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.upcoming__title {
+    font-size: 8.8vh;
+    padding-top: 9.5vh;
+}
+
+.upcoming-exhibition h3 {
+    font-size: 8.8vh;
+    padding-top: 9.6vh;
+}
+
+.date-exhibition {
+    font-size: 5.9vh;
+    line-height: 12.6vh;
+    padding: 4.7vh 0 5vh;
+}
+
+.exhibition-info{
+    font-size: 4.6vh;
+    line-height: 7.5vh;
+}
+
+.last-p{
+    margin-bottom: 5vh;
+}
+
+.buy-btn{
+    position: relative;
+}
+
+.statue-img img{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    height: 120vh;
+    z-index: 3;
+}
+
+.round-box{
+    content: "";
+    position: absolute;
+    width: 90vh;
+    height: 90vh;
+    border-radius: 50%;
+    background-color: #85689a;
+    right: -10vh;
+    top: 5vh;
+    z-index: -1;
+}
+
+.upcoming-exhibition::after{
+    content: "";
+    position: absolute;
+    background-image: url(../photo/2/zig-zag.png);
+    height: 12.9vh;
+    width: 19.8vw;
+    top: 65%;
+    right: 27%;
+    background-size: cover;
+}
+
+.highlights{
+    height: 100vh;
+    padding: 5vh 3.8vw;
+}
+
+.highlights__box{
+    border: 0.76vh solid #85689a;
+    height: 90vh;
+}
+
+.highlights__box-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.highlights__box-image{
+    max-width: 18vw;
+    height: 35.3vh;
+  
+}
+
+.highlights__box-image img{
+    width: 100%;
+    height: auto;
+}
