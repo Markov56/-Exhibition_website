@@ -8,6 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #fff;
+    letter-spacing: 0.075em;
 }
 
 a {
@@ -15,7 +16,7 @@ a {
     color: inherit;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -48,7 +49,10 @@ ul{
 
 .menu__list-item + .menu__list-item {
     margin-left: 3.6vw;
+}
 
+.menu__list li:last-child {
+    padding-left: 3.6vw;
 }
 
 .menu__link:hover {
@@ -147,9 +151,9 @@ ul{
     padding: 1.2vh 6.8vw 1.2vh 1.6vw;
     background-color: #85689a;
     font-size: 2.7vh;
-    line-height: 1.2;
+    line-height: 1.2em;
     color: #fff;
-
+    position: relative;
 }
 
 .more-btn {
@@ -180,6 +184,8 @@ ul{
     z-index: 3;
     overflow: hidden;
 }
+
+
 
 .upcoming__title {
     font-size: 8.8vh;
@@ -274,7 +280,7 @@ ul{
 .highlights__link::before {
     content: "\f178";
     text-align: center;
-    padding-top: 0.7vh;   
+    padding-top: 0.7vh;
     font-family: 'icomoon';
     height: 4.4vh;
     width: 4.4vh;
@@ -285,7 +291,7 @@ ul{
 }
 
 .highlights__box::before,
-.highlights__box::after{
+.highlights__box::after {
     font-family: 'icomoon';
     font-size: 7vh;
     font-weight: bold;
@@ -297,24 +303,25 @@ ul{
 
 
 .highlights__box::before {
-   content: "\f104";
+    content: "\f104";
     left: 7vw;
 }
 
 .highlights__box::after {
-   content: "\f105";
+    content: "\f105";
     right: 7vw;
 }
 
-.view-more-btn{
+.view-more-btn {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 2.8vh;
+    border: 5px solid #fff;
 }
 
 .highlights__title-left,
-.highlights__title-right{
+.highlights__title-right {
     font-size: 5.6vh;
     line-height: 8.6vh;
     letter-spacing: 1px;
@@ -328,17 +335,17 @@ ul{
     transform: translateY(-50%);
 }
 
-.highlights__title-left{
+.highlights__title-left {
     transform: rotate(-90deg);
     left: -9vw;
 }
 
-.highlights__title-right{
+.highlights__title-right {
     transform: rotate(90deg);
     right: -9vw;
 }
 
-.program{
+.program {
     height: 100vh;
     background-image: url(../photo/4/bg-image4.jpg);
     background-repeat: no-repeat;
@@ -347,7 +354,7 @@ ul{
     position: relative;
 }
 
-.program__container{
+.program__container {
     max-width: 78vw;
     padding: 0 2.5vw;
     margin: 0 auto;
@@ -358,35 +365,34 @@ ul{
     padding-bottom: 19.5vh;
 }
 
-.program__text-box{
+.program__text-box {
     padding-top: 10vh;
 }
 
-.program__list{
+.program__list {
     font-size: 4.3vh;
     line-height: 9.3vh;
     letter-spacing: 0.3vw;
 }
 
-.program__list-item + 
-.program__list-item{
+.program__list-item + .program__list-item {
     margin-top: 2vh;
 }
 
-.program__list-link:hover{
-    border-bottom: .9vh solid #473753;    
+.program__list-link:hover {
+    border-bottom: .9vh solid #473753;
 }
 
-.program__img-box{
+.program__img-box {
     padding-top: 2vh;
     width: 50%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;    
+    justify-content: space-around;
 }
 
-.program__img{
+.program__img {
     border-radius: 50%;
     width: 13vw;
     height: 13vw;
@@ -394,9 +400,10 @@ ul{
     background-size: cover;
     position: relative;
 }
+
 /*фиолетовый полупрозрачный слой*/
 .program__img::before {
-	content: "";
+    content: "";
     position: absolute;
     border-radius: 50%;
     width: 13vw;
@@ -404,13 +411,16 @@ ul{
     background-color: #6c547f;
     opacity: 0.8;
     z-index: 1;
+    mix-blend-mode: hard-light;
+
 }
 
-.program__img:hover::before{
-   opacity: 0;
+.program__img:hover::before {
+    opacity: 0;
 }
+
 /*три точки*/
-.program__img::after{
+.program__img::after {
     content: "\f142";
     font-family: 'icomoon';
     font-size: 4vh;
@@ -418,26 +428,126 @@ ul{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: .7vw;    
+    right: .7vw;
     z-index: 3;
+
 }
 
-.learn-more-btn{
+.learn-more-btn {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 5vh;
 }
 
+.footer {
+    background-image: url(../photo/5/back-3.png);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 71.9vw;
+    padding: 0 10px;
+}
+
+.footer__eye {
+    position: relative;
+    height: 25vh;
+    width: 15vw;
+    margin: 0 auto;
+}
+
+.footer__eye img {
+    position: absolute;
+
+    margin: 0 auto;
+    height: 25vh;
+    width: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+/*
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+
+100% {
+opacity:0;
+}
+}
+*/
+
+/*
+.footer__eye img.top{
+    z-index: 3;
+    animation-name: cf3FadeInOut;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+*/
 
 
+.footer__media {
+    display: flex;
+    color: #85689a;
+    font-size: 3.9vh;
+    justify-content: space-between;
+    max-width: 52vw;
+    margin: 0 auto;
+    margin-bottom: 6vh;
+}
 
+.footer__media-item + .footer__media-item {
+    margin-left: 10px;
+}
 
+.user-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 57vw;
+    margin: 0 auto;
+    font-size: 2.8vh;
+    margin-bottom: 6.5vh;
+}
 
+.sign-up-btn {
+    color: #85689a;
+    font-size: 2.7vh;
+    line-height: 3.24vh;
+    border: 3px solid #85689a;
+    padding: 1.4vh 6.25vw;
+}
 
+.subscribe-btn {
+    line-height: 1.55em;
+}
 
+.schedule {
+    color: #85689a;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 3.3vh;
+}
 
+.schedule__left,
+.schedule__right {
+    width: 50%;
+}
 
+/*отступ снизу*/
+.schedule__left p,
+.schedule__right p:first-child {
+    margin-bottom: 5.6vh;
+}
 
-
-
+.menu__bottom {
+    padding-top: 0;
+}
