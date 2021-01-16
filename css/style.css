@@ -15,6 +15,10 @@ a {
     color: inherit;
 }
 
+ul{
+    list-style: none;
+}
+
 .container {
     max-width: 73vw;
     padding: 0 15px;
@@ -315,7 +319,6 @@ a {
     line-height: 8.6vh;
     letter-spacing: 1px;
     color: #85689a;
-/*    border: 1px solid #000;*/
     display: inline-block;
     position: absolute;
     background-color: #fff;
@@ -328,12 +331,113 @@ a {
 .highlights__title-left{
     transform: rotate(-90deg);
     left: -9vw;
-
-/*    transform: translateY(-50%)*/
 }
 
 .highlights__title-right{
     transform: rotate(90deg);
     right: -9vw;
-
 }
+
+.program{
+    height: 100vh;
+    background-image: url(../photo/4/bg-image4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.program__container{
+    max-width: 78vw;
+    padding: 0 2.5vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 19.5vh;
+    padding-bottom: 19.5vh;
+}
+
+.program__text-box{
+    padding-top: 10vh;
+}
+
+.program__list{
+    font-size: 4.3vh;
+    line-height: 9.3vh;
+    letter-spacing: 0.3vw;
+}
+
+.program__list-item + 
+.program__list-item{
+    margin-top: 2vh;
+}
+
+.program__list-link:hover{
+    border-bottom: .9vh solid #473753;    
+}
+
+.program__img-box{
+    padding-top: 2vh;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.program__img{
+    border-radius: 50%;
+    width: 13vw;
+    height: 13vw;
+    margin-left: .875vw;
+    background-size: cover;
+    position: relative;
+}
+/*фиолетовый полупрозрачный слой*/
+.program__img::before {
+	content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 13vw;
+    height: 13vw;
+    background-color: #6c547f;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.program__img:hover::before{
+   opacity: 0;
+}
+/*три точки*/
+.program__img::after{
+    content: "\f142";
+    font-family: 'icomoon';
+    font-size: 4vh;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: .7vw;    
+    z-index: 3;
+}
+
+.learn-more-btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
