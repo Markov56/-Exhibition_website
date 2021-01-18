@@ -185,8 +185,6 @@ ul {
     overflow: hidden;
 }
 
-
-
 .upcoming__title {
     font-size: 8.8vh;
     padding-top: 9.5vh;
@@ -224,9 +222,6 @@ ul {
     z-index: 3;
 }
 
-.round-box {
-    overflow: hidden;
-}
 
 .round {
     content: "";
@@ -238,9 +233,8 @@ ul {
     right: -10vh;
     top: 5vh;
     z-index: -1;
-    overflow: hidden;
 }
-
+/*зигзаг*/
 .upcoming-exhibition::after {
     content: "";
     position: absolute;
@@ -462,36 +456,43 @@ ul {
 
 .footer__eye img {
     position: absolute;
-
     margin: 0 auto;
     height: 25vh;
     width: auto;
-    transition: opacity 1s ease-in-out;
 }
 
-/*
-@keyframes cf3FadeInOut {
-0% {
-opacity:1;
+@keyframes is-open {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-100% {
-opacity:0;
+@keyframes is-closed{
+   80% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
-}
-*/
-
-/*
-.footer__eye img.top{
-    z-index: 3;
-    animation-name: cf3FadeInOut;
+.is-open{
+    animation-name: is-open;
     animation-duration: 1s;
     animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: step-start;  
+    animation-iteration-count: infinite;    
+}
+
+.is-closed {
+    animation-name: is-closed;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: step-start;
     animation-iteration-count: infinite;
 }
-*/
-
 
 .footer__media {
     display: flex;
